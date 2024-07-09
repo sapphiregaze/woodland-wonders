@@ -1,6 +1,10 @@
 name: Test & Build :3
 
-on: [push, pull_request]
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
 
 jobs:
   test:
@@ -61,7 +65,7 @@ jobs:
           allowDirtyBuild: true
 
       # Output
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Build
           path: build
