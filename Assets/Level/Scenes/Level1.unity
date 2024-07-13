@@ -228,8 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 595020944}
-  x_limit: 0.1
-  y_limit: 0.2
+  x_limit: 0.5
+  y_limit: 0.5
 --- !u!1 &595020942
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b01a2fd0f72eca4ea1e2fb1c3444431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement_speed: 0.1
+  movement_speed: 0.03
 --- !u!61 &595020946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ Animator:
   m_GameObject: {fileID: 595020942}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1df9a4f48fbac54448df1e4047104c90, type: 2}
+  m_Controller: {fileID: 9100000, guid: b914a00ec8b7f4d2ebb4d5beb2a2914a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
