@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Player
+  - NPC
+  - BlockMove
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 4055794965
+    locked: 0
+  - name: Player
+    uniqueID: 1720371713
+    locked: 0
+  - name: NPC
+    uniqueID: 1398692245
     locked: 0
