@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
     [SerializeField]
     private  float movement_speed = 1;
     private BoxCollider2D box_collider;
+    private Animator animator;
     
     //Methods
     private void Start(){
         box_collider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();    
     }
 
     private void Update(){
@@ -47,5 +49,15 @@ public class Player : MonoBehaviour
        
         //Apply the movement
         transform.Translate(move_change * Time.fixedDeltaTime * movement_speed);
+    
+
+        // Player Movement Animations
+        if (move_change == Vector2.zero){
+            animator.SetBool("Moving", false);
+        }else{
+             animator.SetBool("Moving", true);
+            animator.SetFloat("MoveX", move_change.x);
+            animator.SetFloat("MoveY", move_change.y);
+        }   
     }
 }
