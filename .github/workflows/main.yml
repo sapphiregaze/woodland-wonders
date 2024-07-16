@@ -77,4 +77,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.platform }}
-          path: build/Woodland Wonders-${{ matrix.platform }}
+          path: build/Woodland Wonders - ${{ matrix.platform }}
