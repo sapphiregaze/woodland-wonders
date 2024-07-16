@@ -71,11 +71,11 @@ jobs:
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
           allowDirtyBuild: true
-          buildName: Woodland Wonders - ${{ matrix.targetPlatform }}
+          buildName: WoodlandWonders-${{ matrix.targetPlatform }}
 
       # Output
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: Build-${{ matrix.targetPlatform }}
-          path: build/Woodland Wonders - ${{ matrix.targetPlatform }}
+          path: build/WoodlandWonders-${{ matrix.targetPlatform }}
