@@ -226,7 +226,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.20776966, g: 0.2735849, b: 0.21505326, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -404,7 +404,7 @@ Animator:
   m_GameObject: {fileID: 757080176}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 860c35219f752514095e7a3fa4d50ae1, type: 2}
+  m_Controller: {fileID: 9100000, guid: b914a00ec8b7f4d2ebb4d5beb2a2914a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
