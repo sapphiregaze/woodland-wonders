@@ -69,12 +69,13 @@ jobs:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          targetPlatform: ${{ matrix.platform }}
+          targetPlatform: ${{ matrix.targetPlatform }}
           allowDirtyBuild: true
-          buildName: Woodland Wonders - ${{ matrix.platform }}
+          buildName: Woodland Wonders - ${{ matrix.targetPlatform }}
 
       # Output
-      - uses: actions/upload-artifact@v4
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: Build-${{ matrix.platform }}
-          path: build/Woodland Wonders - ${{ matrix.platform }}
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/Woodland Wonders - ${{ matrix.targetPlatform }}
