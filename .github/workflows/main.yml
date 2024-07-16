@@ -72,10 +72,14 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
           allowDirtyBuild: true
           buildName: WoodlandWonders-${{ matrix.targetPlatform }}
+      
+      # Debug: List all files recursively
+      - name: List build directory contents
+        run: ls -R
 
       # Output
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: Build-${{ matrix.targetPlatform }}
-          path: build/WoodlandWonders-${{ matrix.targetPlatform }}
+          name: WoodlandWonders-${{ matrix.targetPlatform }}
+          path: WoodlandWonders-${{ matrix.targetPlatform }}
