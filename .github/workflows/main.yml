@@ -72,10 +72,6 @@ jobs:
           targetPlatform: ${{ matrix.targetPlatform }}
           allowDirtyBuild: true
           buildName: WoodlandWonders-${{ matrix.targetPlatform }}
-      
-      # Debug: List all files recursively
-      - name: List build directory contents
-        run: ls -R
 
       # Output
       - name: Upload Build Artifacts
