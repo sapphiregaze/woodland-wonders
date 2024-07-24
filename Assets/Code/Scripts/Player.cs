@@ -103,6 +103,12 @@ public class Player : MonoBehaviour, IDataPersistence
         this.scene = data.scene;
         this.positionX = data.positionX;
         this.positionY = data.positionY;
+
+        if (data.scene != this.scene)
+        {
+            SceneManager.LoadScene(data.scene);
+        }
+        transform.position = new Vector2(data.positionX, data.positionY);
     }
 
     public void SaveData(ref GameData data)

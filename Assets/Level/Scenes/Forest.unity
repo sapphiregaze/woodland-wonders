@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efb16a6096483d438fc664ce60403f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fileName: Save-001.json
 --- !u!4 &571130590
 Transform:
   m_ObjectHideFlags: 0
