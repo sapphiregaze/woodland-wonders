@@ -15,7 +15,7 @@ TagManager:
   - Player
   - NPC
   - BlockMove
-  - 
+  - Ground Layer
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 4055794965
+    locked: 0
+  - name: Blocks
+    uniqueID: 3796349797
     locked: 0
   - name: Player
     uniqueID: 1720371713
