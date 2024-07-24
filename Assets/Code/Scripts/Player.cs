@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDataPersistence
 {
     // Variables
     [SerializeField]
@@ -16,6 +17,10 @@ public class Player : MonoBehaviour
     private Animator animator;
     private Camera main_camera;
 
+    private string scene;
+    private float positionX;
+    private float positionY;
+
     // Methods
     private void Start()
     {
@@ -27,6 +32,12 @@ public class Player : MonoBehaviour
     private void Update()
     {
         MovePlayer();
+
+        this.scene = SceneManager.GetActiveScene().name;
+
+        Vector2 playerPosition = transform.position;
+        this.positionX = playerPosition.x;
+        this.positionY = playerPosition.y;
     }
 
     // Method for player movement and Collision with NPC's and Blocks (walls, trees)
@@ -85,5 +96,19 @@ public class Player : MonoBehaviour
         position.y = Mathf.Clamp(position.y, min_screen_bounds.y, max_screen_bounds.y);
 
         return position;
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.scene = data.scene;
+        this.positionX = data.positionX;
+        this.positionY = data.positionY;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.scene = this.scene;
+        data.positionX = this.positionX;
+        data.positionY = this.positionY;
     }
 }
