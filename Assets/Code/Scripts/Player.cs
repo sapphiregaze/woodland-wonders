@@ -18,8 +18,7 @@ public class Player : MonoBehaviour, IDataPersistence
     private Camera main_camera;
 
     private string scene;
-    private float positionX;
-    private float positionY;
+    private Vector2 playerPosition;
 
     // Methods
     private void Start()
@@ -34,10 +33,7 @@ public class Player : MonoBehaviour, IDataPersistence
         MovePlayer();
 
         this.scene = SceneManager.GetActiveScene().name;
-
-        Vector2 playerPosition = transform.position;
-        this.positionX = playerPosition.x;
-        this.positionY = playerPosition.y;
+        this.playerPosition = transform.position;
     }
 
     // Method for player movement and Collision with NPC's and Blocks (walls, trees)
@@ -101,20 +97,18 @@ public class Player : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.scene = data.scene;
-        this.positionX = data.positionX;
-        this.positionY = data.positionY;
+        this.playerPosition = data.playerPosition;
 
         if (data.scene != this.scene)
         {
             SceneManager.LoadScene(data.scene);
         }
-        transform.position = new Vector2(data.positionX, data.positionY);
+        transform.position = data.playerPosition;
     }
 
     public void SaveData(ref GameData data)
     {
         data.scene = this.scene;
-        data.positionX = this.positionX;
-        data.positionY = this.positionY;
+        data.playerPosition = this.playerPosition;
     }
 }
