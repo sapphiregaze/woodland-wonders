@@ -11,6 +11,6 @@ public class GameData
     public GameData()
     {
         this.scene = "Forest";
-        this.playerPosition = new Vector2(-2.5f, 0f);
+        this.playerPosition = new Vector2(-12f, 0f);
     }
 }
