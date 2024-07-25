@@ -12,7 +12,7 @@ public class GameData
     public GameData()
     {
         this.scene = "Forest";
-        this.positionX = -900;
-        this.positionY = 30;
+        this.positionX = -2.5f;
+        this.positionY = 0f;
     }
 }
