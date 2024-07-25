@@ -7,7 +7,7 @@ public class Player : MonoBehaviour, IDataPersistence
 {
     // Variables
     [SerializeField]
-    private float movement_speed = 0.25f;
+    private float movement_speed = 1f;
     [SerializeField]
     private float boundary_offset_x = 0.01f;
     [SerializeField]
