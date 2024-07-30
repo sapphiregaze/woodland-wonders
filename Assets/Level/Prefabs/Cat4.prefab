@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4964577415107498156
+--- !u!1 &1906260624947022529
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6153745032543784421}
-  - component: {fileID: 2761436363428388459}
-  - component: {fileID: 110952173775666267}
-  - component: {fileID: 4190930986813727023}
-  - component: {fileID: 8907033048963833361}
-  - component: {fileID: 2670938349781116179}
-  - component: {fileID: 4158982929127356929}
+  - component: {fileID: 3911394405154440127}
+  - component: {fileID: 6254620684657747525}
+  - component: {fileID: 2875768211700632330}
+  - component: {fileID: 844717492384309993}
+  - component: {fileID: 1483554416098583522}
+  - component: {fileID: 6606493977974517171}
+  - component: {fileID: 1080218510998342797}
+  - component: {fileID: 2270708529029552918}
   m_Layer: 0
-  m_Name: Cat-4
+  m_Name: Cat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6153745032543784421
+--- !u!4 &3911394405154440127
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964577415107498156}
+  m_GameObject: {fileID: 1906260624947022529}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0024582446, z: 57.494354}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2761436363428388459
+--- !u!212 &6254620684657747525
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964577415107498156}
+  m_GameObject: {fileID: 1906260624947022529}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,13 +90,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &110952173775666267
+--- !u!61 &2875768211700632330
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964577415107498156}
+  m_GameObject: {fileID: 1906260624947022529}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -121,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0148682315, y: 0.0065048486}
+  m_Offset: {x: 0.0014363825, y: 0.0065048486}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,16 +133,16 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.08368969, y: 0.15245521}
+  m_Size: {x: 0.14995342, y: 0.15245521}
   m_EdgeRadius: 0
---- !u!50 &4190930986813727023
+--- !u!50 &844717492384309993
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964577415107498156}
+  m_GameObject: {fileID: 1906260624947022529}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -161,13 +162,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8907033048963833361
+--- !u!114 &1483554416098583522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964577415107498156}
+  m_GameObject: {fileID: 1906260624947022529}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5073f03397f3048cd9ec38c8de0db15d, type: 3}
@@ -177,28 +178,53 @@ MonoBehaviour:
   states:
   - ID: Walking
     Actions:
-    - {fileID: 2670938349781116179}
-    Transitions: []
---- !u!114 &2670938349781116179
+    - {fileID: 1080218510998342797}
+    Transitions:
+    - Decision: {fileID: 6606493977974517171}
+      TrueState: Standing
+      FalseState: 
+  - ID: Standing
+    Actions: []
+    Transitions:
+    - Decision: {fileID: 6606493977974517171}
+      TrueState: 
+      FalseState: Walking
+--- !u!114 &6606493977974517171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964577415107498156}
+  m_GameObject: {fileID: 1906260624947022529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18e4dcf4270c485a81072675d860003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2
+  playerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &1080218510998342797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906260624947022529}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 816b6780a54cc44db8cd5a17e7b0bc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
---- !u!114 &4158982929127356929
+--- !u!114 &2270708529029552918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964577415107498156}
+  m_GameObject: {fileID: 1906260624947022529}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5d9aa22be5f245b3baeeb15c73108f9, type: 3}
@@ -206,6 +232,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points:
   - {x: 0.57251906, y: 0.4949972, z: 0}
-  - {x: -0.4489909, y: 0.24251503, z: 0}
-  - {x: 0.6198815, y: -0.28300947, z: 0}
-  - {x: -0.41650257, y: -0.5175538, z: 0}
+  - {x: -1.2549014, y: 0.016860068, z: 0.000030517578}
+  - {x: -0.6480843, y: -1.1211565, z: 0.000030517578}
+  - {x: 0.94817245, y: -1.0978093, z: 0.000030517578}
