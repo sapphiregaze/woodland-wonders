@@ -25,15 +25,24 @@ public class Player : MonoBehaviour, IDataPersistence
     {
         box_collider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-        main_camera = Camera.main;  // Get the main camera
+        UpdateCameraReference();
     }
 
     private void Update()
     {
+        if (main_camera == null)
+        {
+            UpdateCameraReference();
+        }
         MovePlayer();
 
         this.scene = SceneManager.GetActiveScene().name;
         this.playerPosition = transform.position;
+    }
+
+    public void UpdateCameraReference()
+    {
+        main_camera = Camera.main;
     }
 
     // Method for player movement and Collision with NPC's and Blocks (walls, trees)
