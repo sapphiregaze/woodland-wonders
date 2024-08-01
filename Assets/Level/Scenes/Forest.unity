@@ -14935,7 +14935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800851834168670867, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
       propertyPath: m_SortingLayer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5800851834168670867, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
       propertyPath: m_SortingOrder
@@ -14943,7 +14943,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5800851834168670867, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
       propertyPath: m_SortingLayerID
-      value: 1720371713
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15126,7 +15126,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4833377614859660431, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: offsetX
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4833377614859660431, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: targetScene
