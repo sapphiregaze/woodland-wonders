@@ -15130,7 +15130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4833377614859660431, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: targetScene
-      value: Crosswalk
+      value: Crossroad
       objectReference: {fileID: 0}
     - target: {fileID: 4833377614859660431, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: targetTeleportPoint

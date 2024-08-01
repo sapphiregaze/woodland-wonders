@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/Forest.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Level/Scenes/Crosswalk.unity
+    path: Assets/Level/Scenes/Crossroad.unity
     guid: d9b294a77706b064ea3a45f0dee0b5c8
+  - enabled: 1
+    path: Assets/Level/Scenes/Cliffside.unity
+    guid: 54197e7259063d24a9ebf0cb2046de30
   m_configObjects: {}
