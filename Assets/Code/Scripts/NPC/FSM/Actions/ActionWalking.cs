@@ -10,9 +10,12 @@ public class ActionWalking : FSMAction
     private Waypoint waypoint;
     private int pointIndex;
     private Vector3 nextPosition;
+    private bool isIncrease;
 
     private void Awake() {
         waypoint = GetComponent<Waypoint>(); 
+        isIncrease = true;
+
     }
 
 
@@ -29,10 +32,21 @@ public class ActionWalking : FSMAction
     }
 
     private void UpdateNextPosition(){
-        pointIndex++;
-        if(pointIndex > waypoint.Points.Length -1){
-            pointIndex = 0;
-        }
+        Debug.Log($"isIncrease: {isIncrease}");
+        if(isIncrease){
+            pointIndex++;
+            if(pointIndex >= waypoint.Points.Length -1){
+                isIncrease = false;
+                
+            }
+        }else{
+                pointIndex--;
+                if (pointIndex < 0){
+                    pointIndex = 0;
+                    isIncrease = true;
+                }
+            }
+
     }
 
     private Vector3 GetCurrentPosition(){
