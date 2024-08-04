@@ -8,7 +8,6 @@ public class DecisionDetectPlayer : FSMDecision
     [Header("Config")]
     [SerializeField] private float range;
     [SerializeField] private LayerMask playerMask;
-    // [SerializeField] private GameObject triggleDialogPanel;
     [SerializeField] private GameObject prefab;
     
     private NPCBrain npc;
@@ -21,7 +20,6 @@ public class DecisionDetectPlayer : FSMDecision
     }
     private void Start() {
         animator = GetComponent<Animator>();
-        // ShowDialogTrigger(false);
         newInstance = CreateInstance();
 
     }
@@ -35,11 +33,8 @@ public class DecisionDetectPlayer : FSMDecision
 
         if(playerCollider != null){
             npc.Player = playerCollider.transform;
-            animator.SetBool("isTalking", true);
-            
+            animator.SetBool("isTalking", true);            
             ShowDialogTrigger(true);
-            // triggleDialogPanel.transform.position = npc.transform.position + Vector3.up * 1.5f;
-            // newInstance.SetActive(true);
 
 
             if(Input.GetKeyDown(KeyCode.E)){
@@ -68,9 +63,9 @@ public class DecisionDetectPlayer : FSMDecision
    private GameObject CreateInstance(){
     GameObject newInstance = Instantiate(prefab);
     Canvas canvas = FindObjectOfType<Canvas>();
-    // newInstance.transform.SetParent(npc.transform);
+
     if (canvas != null) {
-            newInstance.transform.SetParent(canvas.transform, false); // Set the Canvas as parent
+            newInstance.transform.SetParent(canvas.transform, false); 
         } else {
             Debug.LogWarning("Canvas not found!");
         }
@@ -84,7 +79,6 @@ public class DecisionDetectPlayer : FSMDecision
             newInstance.transform.position = npc.transform.position + Vector3.up * 1.5f;
         }
     }
-
 
     public void ShowDialogTrigger(bool value){
         newInstance.SetActive(value);
