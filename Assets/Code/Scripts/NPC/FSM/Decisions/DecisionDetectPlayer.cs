@@ -8,12 +8,12 @@ public class DecisionDetectPlayer : FSMDecision
     [Header("Config")]
     [SerializeField] private float range;
     [SerializeField] private LayerMask playerMask;
-    [SerializeField] private GameObject triggleDialogPanel;
-    // public GameObject triggleDialogPanel;
-        
+    // [SerializeField] private GameObject triggleDialogPanel;
+    [SerializeField] private GameObject prefab;
     
     private NPCBrain npc;
     private Animator animator;
+    private GameObject newInstance;
 
     private void Awake() {
         npc = GetComponent<NPCBrain>();
@@ -21,7 +21,8 @@ public class DecisionDetectPlayer : FSMDecision
     }
     private void Start() {
         animator = GetComponent<Animator>();
-        ShowDialogTrigger(false);
+        // ShowDialogTrigger(false);
+        newInstance = CreateInstance();
 
     }
     public override bool Decide()
@@ -37,8 +38,8 @@ public class DecisionDetectPlayer : FSMDecision
             animator.SetBool("isTalking", true);
             
             ShowDialogTrigger(true);
-            triggleDialogPanel.transform.position = transform.position + Vector3.up * 1.5f;
-
+            // triggleDialogPanel.transform.position = npc.transform.position + Vector3.up * 1.5f;
+            // newInstance.SetActive(true);
 
 
             if(Input.GetKeyDown(KeyCode.E)){
@@ -63,7 +64,31 @@ public class DecisionDetectPlayer : FSMDecision
     Gizmos.DrawWireSphere(transform.position, range);
    }
 
-   public void ShowDialogTrigger(bool value){
-    triggleDialogPanel.SetActive(value);
-}
+
+   private GameObject CreateInstance(){
+    GameObject newInstance = Instantiate(prefab);
+    Canvas canvas = FindObjectOfType<Canvas>();
+    // newInstance.transform.SetParent(npc.transform);
+    if (canvas != null) {
+            newInstance.transform.SetParent(canvas.transform, false); // Set the Canvas as parent
+        } else {
+            Debug.LogWarning("Canvas not found!");
+        }
+    newInstance.transform.position = npc.transform.position + Vector3.up * 1.5f;
+    newInstance.SetActive(false);
+    return newInstance;
+   }
+
+   private void LateUpdate() {
+        if (newInstance != null) {
+            newInstance.transform.position = npc.transform.position + Vector3.up * 1.5f;
+        }
+    }
+
+
+    public void ShowDialogTrigger(bool value){
+        newInstance.SetActive(value);
+    }
+
+   
 }
