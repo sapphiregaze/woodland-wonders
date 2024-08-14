@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/Oceanside.unity
     guid: 8bd254438794e5941ac1cd60edd9f35d
+  - enabled: 1
+    path: Assets/Level/Scenes/DesolateForest.unity
+    guid: 1e029d284912f24459de3ed68b1e1b6e
   m_configObjects: {}
