@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 5608510796123807691}
   - component: {fileID: 5581441480459192541}
   - component: {fileID: 1126912100411361261}
+  - component: {fileID: 5746994160173504769}
   m_Layer: 7
   m_Name: Cat3
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3241409262806491679}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.02, y: -0.531, z: 57.494354}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
@@ -233,23 +234,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: -0.00642395, y: 0.012600839, z: 0.0002746582}
-  - {x: -5.028862, y: 0.18421328, z: 0.0002746582}
-  - {x: -5.794905, y: 0.19416213, z: 0.0002746582}
-  - {x: -6.8096642, y: 0.19416213, z: 0.0002746582}
-  - {x: -7.784628, y: 0.27375108, z: 0.0002746582}
-  - {x: -8.640209, y: 0.3334427, z: 0.0002746582}
-  - {x: -9.674865, y: 0.4428774, z: 0.0002746582}
-  - {x: -11.176025, y: 0.44314754, z: -0.00021362305}
-  - {x: -13.213242, y: 0.37861645, z: -0.00021362305}
-  - {x: -12.301298, y: 1.5571221, z: 0.0002746582}
-  - {x: -11.724279, y: 2.5420356, z: 0.0002746582}
-  - {x: -11.206951, y: 3.4672565, z: 0.0002746582}
-  - {x: -10.369778, y: 4.2973347, z: -0.00021362305}
-  - {x: -12.495591, y: 4.596351, z: -0.00021362305}
-  - {x: -13.78423, y: 4.424533, z: -0.00021362305}
-  - {x: -14.324231, y: 3.5777125, z: -0.00021362305}
-  - {x: -15.490144, y: 3.3445306, z: -0.00021362305}
+  - {x: -0.56156015, y: -0.06705189, z: -0.00032424927}
+  - {x: -1.2320795, y: -0.1089592, z: -0.00032424927}
+  - {x: -1.8942175, y: 0.008381844, z: -0.00032424927}
+  - {x: -2.5144482, y: 0.40231228, z: -0.00032424927}
+  - {x: -2.9335232, y: 0.71242785, z: -0.00032424927}
 --- !u!95 &1126912100411361261
 Animator:
   serializedVersion: 5
@@ -271,3 +260,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5746994160173504769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3241409262806491679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ffcdae109a6a6b4b9571c5f94e5ff96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    lines:
+    - speakerName: cat3
+      sentence: Hi, I'm cat3
+    - speakerName: Player
+      sentence: ' Hi, cat3. bye!'

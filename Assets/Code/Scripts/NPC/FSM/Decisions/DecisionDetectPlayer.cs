@@ -40,7 +40,7 @@ public class DecisionDetectPlayer : FSMDecision
             if(Input.GetKeyDown(KeyCode.E)){
                 ShowDialogTrigger(false);
                 Debug.Log("show dialog~~");
-                //TODO: add cat's dialog here
+                TriggerDialog();
             }
 
             return true;
@@ -52,6 +52,15 @@ public class DecisionDetectPlayer : FSMDecision
 
 
         return false;   
+    }
+
+    private void TriggerDialog()
+    {   
+        DialogTrigger dialogTrigger = GetComponent<DialogTrigger>();
+        if (dialogTrigger != null)
+        {
+            dialogTrigger.TriggerDialog();
+        }
     }
 
    private void OnDrawGizmosSelected() {
@@ -66,6 +75,7 @@ public class DecisionDetectPlayer : FSMDecision
 
     if (canvas != null) {
             newInstance.transform.SetParent(canvas.transform, false); 
+            newInstance.transform.SetSiblingIndex(0);
         } else {
             Debug.LogWarning("Canvas not found!");
         }
