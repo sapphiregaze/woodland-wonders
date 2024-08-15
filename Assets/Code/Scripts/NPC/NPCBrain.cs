@@ -3,9 +3,16 @@ using UnityEngine;
 public class NPCBrain : MonoBehaviour {
 [SerializeField] private string initState; 
 [SerializeField] private FSMState[] states; 
+
+    private DialogTrigger dialogTrigger;
+
     public FSMState CurrentState {get; set;}
     public Transform Player{get;set;}
 
+    private void Awake() {
+        dialogTrigger = GetComponent<DialogTrigger>();
+    }
+    
     private void Start() {
         ChangeState(initState);
     }
