@@ -205,6 +205,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 64
+  prefab: {fileID: 2036101197335330550, guid: cd7be33167f4b4f34bc4efc0d9928381, type: 3}
 --- !u!114 &1080218510998342797
 MonoBehaviour:
   m_ObjectHideFlags: 0
