@@ -5,7 +5,7 @@ using TMPro;
 
 public class LoadCharacter : MonoBehaviour
 {
-    public GameObject[] charcterPrefabs;
+    public GameObject[] characterPrefabs;
     public Transform spawnPoint;
     public TMP_Text label;
 
