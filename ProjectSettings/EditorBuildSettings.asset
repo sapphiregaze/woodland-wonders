@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/DesolateForest.unity
     guid: 1e029d284912f24459de3ed68b1e1b6e
+  - enabled: 1
+    path: Assets/Level/Scenes/Desert.unity
+    guid: cd8d8c0b503ca7d478ebe2fd879e89c6
+  - enabled: 1
+    path: Assets/Level/Scenes/Singularity.unity
+    guid: 78a411bd5d7efca4a9347e0feb6c8cee
   m_configObjects: {}
