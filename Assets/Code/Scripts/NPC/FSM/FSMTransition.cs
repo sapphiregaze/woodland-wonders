@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class FSMTransition : MonoBehaviour
+[Serializable]
+
+public class FSMTransition 
 {
   public FSMDecision Decision;
   public string TrueState;

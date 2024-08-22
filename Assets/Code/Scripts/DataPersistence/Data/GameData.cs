@@ -6,13 +6,11 @@ using UnityEngine;
 public class GameData
 {
     public string scene;
-    public float positionX;
-    public float positionY;
+    public Vector2 playerPosition;
 
     public GameData()
     {
         this.scene = "Forest";
-        this.positionX = -2.5f;
-        this.positionY = 0f;
+        this.playerPosition = new Vector2(-12f, 0f);
     }
 }

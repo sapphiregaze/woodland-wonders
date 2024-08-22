@@ -7,7 +7,7 @@ public class Player : MonoBehaviour, IDataPersistence
 {
     // Variables
     [SerializeField]
-    private float movement_speed = 0.25f;
+    private float movement_speed = 1f;
     [SerializeField]
     private float boundary_offset_x = 0.01f;
     [SerializeField]
@@ -18,26 +18,31 @@ public class Player : MonoBehaviour, IDataPersistence
     private Camera main_camera;
 
     private string scene;
-    private float positionX;
-    private float positionY;
+    private Vector2 playerPosition;
 
     // Methods
     private void Start()
     {
         box_collider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-        main_camera = Camera.main;  // Get the main camera
+        UpdateCameraReference();
     }
 
     private void Update()
     {
+        if (main_camera == null)
+        {
+            UpdateCameraReference();
+        }
         MovePlayer();
 
         this.scene = SceneManager.GetActiveScene().name;
+        this.playerPosition = transform.position;
+    }
 
-        Vector2 playerPosition = transform.position;
-        this.positionX = playerPosition.x;
-        this.positionY = playerPosition.y;
+    public void UpdateCameraReference()
+    {
+        main_camera = Camera.main;
     }
 
     // Method for player movement and Collision with NPC's and Blocks (walls, trees)
@@ -101,20 +106,18 @@ public class Player : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.scene = data.scene;
-        this.positionX = data.positionX;
-        this.positionY = data.positionY;
+        this.playerPosition = data.playerPosition;
 
         if (data.scene != this.scene)
         {
             SceneManager.LoadScene(data.scene);
         }
-        transform.position = new Vector2(data.positionX, data.positionY);
+        transform.position = data.playerPosition;
     }
 
     public void SaveData(ref GameData data)
     {
         data.scene = this.scene;
-        data.positionX = this.positionX;
-        data.positionY = this.positionY;
+        data.playerPosition = this.playerPosition;
     }
 }

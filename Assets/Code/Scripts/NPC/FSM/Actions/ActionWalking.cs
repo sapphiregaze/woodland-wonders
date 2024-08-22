@@ -10,9 +10,16 @@ public class ActionWalking : FSMAction
     private Waypoint waypoint;
     private int pointIndex;
     private Vector3 nextPosition;
+    private bool isIncrease;
+     private Vector3 originalScale;
 
     private void Awake() {
         waypoint = GetComponent<Waypoint>(); 
+        isIncrease = true;
+
+    }
+    private void Start() {
+        originalScale = transform.localScale;
     }
 
 
@@ -29,14 +36,37 @@ public class ActionWalking : FSMAction
     }
 
     private void UpdateNextPosition(){
-        pointIndex++;
-        if(pointIndex > waypoint.Points.Length -1){
-            pointIndex = 0;
-        }
+        if(isIncrease){
+            pointIndex++;
+            if(pointIndex >= waypoint.Points.Length -1){
+                isIncrease = false;
+               
+                
+            }
+        }else{
+                pointIndex--;
+                if (pointIndex < 0){
+                    pointIndex = 0;
+                    isIncrease = true;
+                }
+            }
+    UpdateScale();
     }
 
     private Vector3 GetCurrentPosition(){
         return waypoint.GetPosition(pointIndex);
+    }
+
+    void UpdateScale()
+    { 
+        if (transform.position.x > GetCurrentPosition().x)
+        {
+            transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
+        }
+        else
+        {
+            transform.localScale = originalScale;
+        }
     }
   
 }
