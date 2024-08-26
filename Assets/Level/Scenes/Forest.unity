@@ -14738,6 +14738,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3133764814182528736, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
+      propertyPath: characterSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133764814182528736, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
+      propertyPath: characterSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -968634013, guid: e1ecef131e481c940979d5d4ab39b785, type: 3}
+    - target: {fileID: 3133764814182528736, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
+      propertyPath: characterSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: -1399124758, guid: 16760650f05ce3d49aa3fe88a078ef95, type: 3}
+    - target: {fileID: 3133764814182528736, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
+      propertyPath: characterSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: -1134648914, guid: 4ff37f9ddf8fe5d4d940273d8282d9ce, type: 3}
+    - target: {fileID: 3133764814182528736, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
+      propertyPath: characterSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: -1553581195, guid: 233263455b5442843a35c294be90d71f, type: 3}
+    - target: {fileID: 3133764814182528736, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
+      propertyPath: characterSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: -2017874750, guid: 9b8eeefd9641535408963b2f309f4e83, type: 3}
     - target: {fileID: 4079792084251771588, guid: 4d92690c36ba351409cf3c328a630480, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12
