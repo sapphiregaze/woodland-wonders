@@ -3811,6 +3811,7 @@ GameObject:
   - component: {fileID: 874349082}
   - component: {fileID: 874349081}
   - component: {fileID: 874349080}
+  - component: {fileID: 874349083}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3893,6 +3894,27 @@ Transform:
   - {fileID: 1888348294}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874349083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874349079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb292e94cf87e049b129bfd25f12d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    lines:
+    - speakerName: Salem
+      sentence: "A village without its people\u2026 only cats left behind. What happened
+        here?"
+    - speakerName: Salem
+      sentence: "The cliffside breeze feels eerie. Something\u2019s wrong."
+    - speakerName: Salem
+      sentence: These cats must know something. I should talk to them.
 --- !u!1001 &876165492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4262,17 +4284,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7562740887146755814, guid: 9b7c1a6c14598b94892da4f1b9877180, type: 3}
   m_PrefabInstance: {fileID: 958740779}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &962405303 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5858754064342677504, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
-  m_PrefabInstance: {fileID: 1033855503}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1014662280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4343,17 +4354,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1888348294}
     m_Modifications:
-    - target: {fileID: 4460405649764719720, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
-      propertyPath: m_fontSize
-      value: 58.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 5858754064342677504, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
     - target: {fileID: 6254739423248656876, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 6936178168718936652, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
       propertyPath: m_Pivot.x
@@ -4442,10 +4445,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8641804284109396184, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1233043678}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
 --- !u!224 &1033855504 stripped
 RectTransform:
@@ -16320,6 +16320,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 542464537}
     m_Modifications:
+    - target: {fileID: 170158601021761430, guid: 5231f9ae0e3494edda78edc23dccd256, type: 3}
+      propertyPath: dialog.lines.Array.data[0].sentence
+      value: "Have you seen them? The humans just\u2026 vanished."
+      objectReference: {fileID: 0}
+    - target: {fileID: 170158601021761430, guid: 5231f9ae0e3494edda78edc23dccd256, type: 3}
+      propertyPath: dialog.lines.Array.data[1].sentence
+      value: "No, but I\u2019m trying to find out why. Any clues?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 170158601021761430, guid: 5231f9ae0e3494edda78edc23dccd256, type: 3}
+      propertyPath: dialog.lines.Array.data[2].sentence
+      value: "They were talking about the forest, something about gathering supplies\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 170158601021761430, guid: 5231f9ae0e3494edda78edc23dccd256, type: 3}
+      propertyPath: dialog.lines.Array.data[0].speakerName
+      value: Ginger
+      objectReference: {fileID: 0}
+    - target: {fileID: 170158601021761430, guid: 5231f9ae0e3494edda78edc23dccd256, type: 3}
+      propertyPath: dialog.lines.Array.data[1].speakerName
+      value: Salem
+      objectReference: {fileID: 0}
+    - target: {fileID: 170158601021761430, guid: 5231f9ae0e3494edda78edc23dccd256, type: 3}
+      propertyPath: dialog.lines.Array.data[2].speakerName
+      value: Ginger
+      objectReference: {fileID: 0}
     - target: {fileID: 3646368321999392147, guid: 5231f9ae0e3494edda78edc23dccd256, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.96
@@ -16431,31 +16455,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7595948666774069557, guid: 07923881a61b8f246acac2ce8eee0e8e, type: 3}
   m_PrefabInstance: {fileID: 1225023448}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1233043674 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8641804284109396184, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
-  m_PrefabInstance: {fileID: 1033855503}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1233043675 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5526044552435282985, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
-  m_PrefabInstance: {fileID: 1033855503}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1233043678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233043674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6387675f4c76ea249825a845d04dad74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 962405303}
-  dialogText: {fileID: 1761486036}
-  animator: {fileID: 1233043675}
 --- !u!1 &1283197743
 GameObject:
   m_ObjectHideFlags: 0
@@ -16561,6 +16560,44 @@ PrefabInstance:
     - target: {fileID: 3241409262806491679, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
       propertyPath: m_Name
       value: Cat3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[0].sentence
+      value: I overheard the humans talking about a big project, something in the
+        woods.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[1].sentence
+      value: A project? That might explain why the forest is upset.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[2].sentence
+      value: "Maybe the cats at Oceanside Village know more. They\u2019ve been hearing
+        things."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[3].sentence
+      value: "I\u2019ll head there next. Thanks for the tip."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[0].speakerName
+      value: Cheese
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[1].speakerName
+      value: Salem
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[2].speakerName
+      value: Cheese
+      objectReference: {fileID: 0}
+    - target: {fileID: 5746994160173504769, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
+      propertyPath: dialog.lines.Array.data[3].speakerName
+      value: Salem
       objectReference: {fileID: 0}
     - target: {fileID: 9018068073872132949, guid: cc52fed9cf4664985aae8a04542642c3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17462,17 +17499,6 @@ Transform:
   - {fileID: 954160736}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1761486036 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4460405649764719720, guid: fe7c665db0e1f5a43a6fac3faebba37e, type: 3}
-  m_PrefabInstance: {fileID: 1033855503}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1830371265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18412,6 +18438,35 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 542464537}
     m_Modifications:
+    - target: {fileID: 3551865941714581181, guid: d07f996633daa492eb93e7c87181343d, type: 3}
+      propertyPath: dialog.lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551865941714581181, guid: d07f996633daa492eb93e7c87181343d, type: 3}
+      propertyPath: dialog.lines.Array.data[0].sentence
+      value: "The forest isn\u2019t what it used to be. It\u2019s\u2026 angry."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551865941714581181, guid: d07f996633daa492eb93e7c87181343d, type: 3}
+      propertyPath: dialog.lines.Array.data[1].sentence
+      value: Angry? What do you mean?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551865941714581181, guid: d07f996633daa492eb93e7c87181343d, type: 3}
+      propertyPath: dialog.lines.Array.data[2].sentence
+      value: "The trees, the animals\u2026 they\u2019ve changed. It\u2019s like they
+        want the humans gone."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551865941714581181, guid: d07f996633daa492eb93e7c87181343d, type: 3}
+      propertyPath: dialog.lines.Array.data[0].speakerName
+      value: Midnight
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551865941714581181, guid: d07f996633daa492eb93e7c87181343d, type: 3}
+      propertyPath: dialog.lines.Array.data[1].speakerName
+      value: Salem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551865941714581181, guid: d07f996633daa492eb93e7c87181343d, type: 3}
+      propertyPath: dialog.lines.Array.data[2].speakerName
+      value: Midnight
+      objectReference: {fileID: 0}
     - target: {fileID: 5273948199278454844, guid: d07f996633daa492eb93e7c87181343d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.848

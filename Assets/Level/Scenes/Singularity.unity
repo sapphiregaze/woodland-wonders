@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 956075094}
   - component: {fileID: 956075093}
   - component: {fileID: 956075092}
+  - component: {fileID: 956075095}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -458,6 +459,26 @@ Transform:
   - {fileID: 1387535549}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &956075095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956075091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb292e94cf87e049b129bfd25f12d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    lines:
+    - speakerName: Salem
+      sentence: "The Spirit Tree\u2026 it\u2019s so much bigger than I imagined.\n"
+    - speakerName: Salem
+      sentence: This is where it ends. I need to make the spirits understand.
+    - speakerName: Salem
+      sentence: "The fate of the humans, the forest\u2026 it all comes down to this."
 --- !u!1001 &1074509914
 PrefabInstance:
   m_ObjectHideFlags: 0

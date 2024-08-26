@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 331918246}
   - component: {fileID: 331918245}
   - component: {fileID: 331918244}
+  - component: {fileID: 331918247}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -459,6 +460,31 @@ Transform:
   - {fileID: 1201089197}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331918247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331918243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb292e94cf87e049b129bfd25f12d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    lines:
+    - speakerName: Salem
+      sentence: "This desert used to be part of the forest\u2026 It looks so different...\n"
+    - speakerName: Salem
+      sentence: The humans must have caused this with their deforestation.
+    - speakerName: Salem
+      sentence: 'The spirits must be furious. I need to make things right.
+
+'
+    - speakerName: Salem
+      sentence: Ash mentioned something about a cave earlier... I should go check
+        it out.
 --- !u!1 &472488254
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,7 +2827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392809557233126362, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.71783596
+      value: 0.7119071
       objectReference: {fileID: 0}
     - target: {fileID: 8392809557233126362, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2809,7 +2835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8392809557233126362, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.66842884
+      value: 0.66249996
       objectReference: {fileID: 0}
     - target: {fileID: 8392809557233126362, guid: 1fec2ad4887078f4497a2b248a6cbc9d, type: 3}
       propertyPath: m_AnchorMin.y

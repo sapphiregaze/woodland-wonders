@@ -812,6 +812,7 @@ GameObject:
   - component: {fileID: 444952049}
   - component: {fileID: 444952048}
   - component: {fileID: 444952047}
+  - component: {fileID: 444952050}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -894,6 +895,26 @@ Transform:
   - {fileID: 1645341115}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &444952050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444952046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb292e94cf87e049b129bfd25f12d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    lines:
+    - speakerName: Salem
+      sentence: "This path splits\u2026 which way should I go?"
+    - speakerName: Salem
+      sentence: "The forest feels different here, like it\u2019s hiding something."
+    - speakerName: Salem
+      sentence: "I\u2019ll need to choose carefully. The upper path seems promising...\n"
 --- !u!1 &502453884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4078494368965974193, guid: bdd20ae8ad0bdff428fc4e20cde95442, type: 3}
