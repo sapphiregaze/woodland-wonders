@@ -135,9 +135,9 @@ public class DialogManager : MonoBehaviour
 
     private void Update()
     {
-        if (animator.GetBool("IsOpen") && Input.GetKeyDown(KeyCode.Space))
+        if (animator.GetBool("IsOpen") && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
-            if (dialogLines.Count == 0 && dialogText.text == "")
+            if (dialogLines.Count == 0)
             {
                 EndDialog();  // Close the dialog panel when the player presses space after the conversation is over
             }
@@ -181,11 +181,11 @@ public class DialogManager : MonoBehaviour
         dialogText.text = "";
 
         // yield return null; 
-            Debug.Log("Sentence to display: " + sentence);
+        Debug.Log("Sentence to display: " + sentence);
 
         foreach (char letter in sentence.ToCharArray())
-        {   
-             
+        {
+
             dialogText.text += letter;
 
             yield return new WaitForSeconds(0.05f);
@@ -194,7 +194,7 @@ public class DialogManager : MonoBehaviour
 
     void EndDialog()
     {
-        dialogText.text = "";
         animator.SetBool("IsOpen", false);
+        dialogText.text = "";
     }
 }
