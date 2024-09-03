@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class charSelection : MonoBehaviour
 {
@@ -69,8 +70,10 @@ public class charSelection : MonoBehaviour
     {
         if (selectedIndex >= 0 && selectedIndex < spriteOptions.Length)
         {
+             Debug.Log($"Saving selected character index: {selectedIndex}");
             PlayerPrefs.SetInt("selectedCharacter", selectedIndex);
             PlayerPrefs.Save();
+            SceneManager.LoadScene("Forest");
         }
     }
     private void OnResetSelection()

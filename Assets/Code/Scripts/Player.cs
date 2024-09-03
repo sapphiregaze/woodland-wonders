@@ -20,12 +20,19 @@ public class Player : MonoBehaviour, IDataPersistence
     private string scene;
     private Vector2 playerPosition;
 
+    //added for character sprites
+    [SerializeField]
+    private Sprite[] characterSprites;
+    private SpriteRenderer spriteRenderer;
+
     // Methods
     private void Start()
     {
         box_collider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>(); //starts SpriteRenderer
         UpdateCameraReference();
+        ApplySelectedCharacter(); //applies the selected char sprite
     }
 
     private void Update()
@@ -119,5 +126,21 @@ public class Player : MonoBehaviour, IDataPersistence
     {
         data.scene = this.scene;
         data.playerPosition = this.playerPosition;
+    }
+
+    //gets selected index from player prefs, applies selected sprites or defaults when no selection
+   private void ApplySelectedCharacter()
+   {
+        int selectedIndex = PlayerPrefs.GetInt("selectedCharacter", 0);
+        Debug.Log($"Applying character with index: {selectedIndex}");
+        if (selectedIndex >= 0 && selectedIndex < characterSprites.Length)
+        {
+            spriteRenderer.sprite = characterSprites[selectedIndex];
+        }
+        else
+        {
+            Debug.LogWarning("Selected index is out of bounds. Applying default sprite.");
+            spriteRenderer.sprite = characterSprites[0];
+        }
     }
 }
